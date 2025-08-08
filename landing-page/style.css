@@ -58,7 +58,7 @@
         font-family: poppins;
         font-size: 14px;
         padding: 15px 30px;
-        background: black;
+        background: #ee2446;
         color: white;
         border-radius: 8mm;
         border: none;
@@ -67,12 +67,16 @@
         margin-top: 20px;
       }
 
+      .daycare-btn:hover {
+        background: #f00d33;
+      }
+
       .parent-btn {
         font-family: poppins;
         font-size: 14px;
         padding: 15px 30px;
-        background: #ccc;
-        color: black;
+        background: #2b66f0;
+        color: white;
         border-radius: 8mm;
         border: none;
         outline: none;
@@ -80,6 +84,94 @@
         margin-top: 20px;
         margin-left: 10px;
       }
+
+      .parent-btn:hover {
+        background: #0950f5;
+      }
+
+      :root{
+        --daycare: #ee2446;       /* Soft Blue */
+        --daycare-dark: #f00d33;  /* Indigo Dark */
+        --parent: #2b66f0;        /* Mint Green */
+        --parent-dark: #0950f5;   /* Mint Dark */
+        --text: #FFFFFF;
+      }
+      
+      /* Base comum */
+      .daycare-btn,
+      .parent-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        padding: .75rem 1.25rem;
+        border-radius: 12px;
+        font-weight: 600;
+        color: var(--text);
+        border: none;
+        cursor: pointer;
+        transition:
+          transform 180ms cubic-bezier(.2,.9,.2,1),
+          box-shadow 180ms cubic-bezier(.2,.9,.2,1),
+          background-color 180ms ease;
+        transform: translateY(0) scale(1);
+        will-change: transform, box-shadow, background-color;
+      }
+      
+      /* Daycare (primary) */
+      .daycare-btn {
+        background: var(--daycare);
+      }
+      .daycare-btn:hover,
+      .daycare-btn:focus {
+        background: var(--daycare-dark);
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 12px 28px rgba(79,70,229,0.12);
+        outline: none;
+      }
+      .daycare-btn:focus {
+        box-shadow: 0 8px 24px rgba(79,70,229,0.18), 0 0 0 4px rgba(91,123,210,0.12);
+      }
+      
+      /* Parent (secondary) */
+      .parent-btn {
+        background: var(--parent);
+      }
+      .parent-btn:hover,
+      .parent-btn:focus {
+        background: var(--parent-dark);
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 12px 28px rgba(16,185,129,0.10);
+        outline: none;
+      }
+      .parent-btn:focus {
+        box-shadow: 0 8px 24px rgba(16,185,129,0.14), 0 0 0 4px rgba(160,210,180,0.12);
+      }
+      
+      /* Pequeno ícone que desliza (opcional) */
+      .daycare-btn .icon,
+      .parent-btn .icon {
+        display: inline-block;
+        transform: translateX(0);
+        transition: transform 180ms cubic-bezier(.2,.9,.2,1);
+      }
+      .daycare-btn:hover .icon,
+      .parent-btn:hover .icon {
+        transform: translateX(6px);
+      }
+      
+      /* Acessibilidade: respeitar preferência por menos movimento */
+      @media (prefers-reduced-motion: reduce) {
+        .daycare-btn,
+        .parent-btn,
+        .daycare-btn .icon,
+        .parent-btn .icon {
+          transition: none;
+          transform: none !important;
+          box-shadow: none !important;
+        }
+      }
+      
     
       /*Styling for the left elements content ends here...*/
     
@@ -95,19 +187,19 @@
       }
     
       .card:nth-child(1) {
-        background: rgb(64, 122, 255);
+        background: #407aff;
       }
     
       .card:nth-child(2) {
-        background: rgb(221, 62, 88);
+        background: #dd3e58;
       }
     
       .card:nth-child(3) {
-        background: rgb(186, 113, 245);
+        background: #ba71f5;
       }
     
       .card:nth-child(4) {
-        background: rgb(247, 92, 208);
+        background: #f75cd0;
       }
     
       /*Styling for the card content starts here...*/
