@@ -71,6 +71,11 @@
         background: #f00d33;
       }
 
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
       .parent-btn {
         font-family: poppins;
         font-size: 14px;

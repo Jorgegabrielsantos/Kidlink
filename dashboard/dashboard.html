@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidLink - Daycare Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                        fill="#5B9BD5" />
+                    <path
+                        d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                        fill="white" />
+                    <path d="M12 17C8.13401 17 5 13.866 5 10H19C19 13.866 15.866 17 12 17Z" fill="#F4A89C" />
+                </svg>
+                Kid<span>Link</span>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="../landing-page/index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Reports</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-controls">
+                <button class="btn btn-ghost" onclick="toggleTheme()">
+                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5M17.6859 17.69L18.5 18.5M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="btn btn-primary">Add Child</button>
+            </div>
+        </header>
+        
+        <!-- Dashboard Content -->
+        <div class="dashboard">
+            <h1>Dashboard Overview</h1>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Children</h3>
+                    <p class="value">0</p>
+                    <div class="trend up">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        +0 this week
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Attendance Today</h3>
+                    <p class="value">0</p>
+                    <div class="trend up">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        0% attendance
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Upcoming Events</h3>
+                    <p class="value">3</p>
+                    <div class="trend">
+                        Next: Field Trip (Jun 15)
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>Unread Messages</h3>
+                    <p class="value">0</p>
+                    <div class="trend down">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19M19 12L12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        +0 from yesterday
+                    </div>
+                </div>
+            </div>
+            
+            <div class="activity-feed">
+                <h2>Recent Activity</h2>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar">JD</div>
+                    <div class="activity-content">
+                        <h4>John Doe checked in</h4>
+                        <p>Arrived at 8:15 AM</p>
+                    </div>
+                    <div class="activity-time">1h ago</div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar">MS</div>
+                    <div class="activity-content">
+                        <h4>New message from Maria Smith</h4>
+                        <p>"Will pick up early today at 3pm"</p>
+                    </div>
+                    <div class="activity-time">2h ago</div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar">RJ</div>
+                    <div class="activity-content">
+                        <h4>Robert Johnson paid invoice</h4>
+                        <p>June tuition payment received</p>
+                    </div>
+                    <div class="activity-time">4h ago</div>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <button class="action-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4V20M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Add Child</span>
+                    </button>
+                    
+                    <button class="action-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Send Message</span>
+                    </button>
+                    
+                    <button class="action-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 7V3M16 7V3M7 11H17M5 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V19C3 20.1046 3.89543 21 5 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Create Event</span>
+                    </button>
+                    
+                    <button class="action-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 14L3 14L3 4L15 4L15 10M9 10L21 10L21 20L11 20L11 14M9 10L15 4M9 10L15 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Generate Report</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
