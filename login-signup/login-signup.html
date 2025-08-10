@@ -4,24 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="login-signup.css">
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <title>Login / Sign Up</title>
 </head>
 <body>
   <div class="container" id="form-container">
     <div id="login-form" class="fade active">
       <h2>Login</h2>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Login</button>
+
+    
+      <div class="avatar-container">
+        <div class="user-avatar"> 
+          <img src="" alt="">
+        </div>
+      </div>
+
+    <form>
+      <input type="email" placeholder="Email" required/>
+      <input type="password" placeholder="Password" required/>
+    </form>
+
+      <button><a href="../dashboard/dashboard.html">Login</a></button>
       <div class="toggle-link" onclick="toggleForm('signup')">Don't have an account? Sign up</div>
     </div>
 
     <div id="signup-form" class="fade" style="display:none;">
       <h2>Sign Up</h2>
-      <input type="text" placeholder="Full Name" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Sign Up</button>
+
+      <div class="avatar-container">
+        <div class="user-avatar"> 
+          <img src="" alt="">
+        </div>
+      </div>
+
+    <form>
+      <input type="text" placeholder="Daycare Name" required/>
+      <input type="email" placeholder="Email" required/>
+      <input type="password" placeholder="Password" required/>
+    </form>
+
+      <button><a href="../dashboard/dashboard.html">Sign Up</a></button>
       <div class="toggle-link" onclick="toggleForm('login')">Already have an account? Login</div>
     </div>
   </div>

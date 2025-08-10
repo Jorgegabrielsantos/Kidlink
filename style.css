@@ -96,10 +96,10 @@
       }
 
       :root{
-        --daycare: #ee2446;       /* Soft Blue */
-        --daycare-dark: #f00d33;  /* Indigo Dark */
-        --parent: #2b66f0;        /* Mint Green */
-        --parent-dark: #0950f5;   /* Mint Dark */
+        --daycare: #b30d44;      
+        --daycare-dark: #c4104c;  
+        --parent: #ee7c89;        
+        --parent-dark: #ff6c7d;  
         --text: #FFFFFF;
       }
       
@@ -193,19 +193,19 @@
       }
     
       .card:nth-child(1) {
-        background: #407aff;
+        background: #fff5e4;
       }
     
       .card:nth-child(2) {
-        background: #dd3e58;
+        background: #ffc4c4;
       }
     
       .card:nth-child(3) {
-        background: #ba71f5;
+        background: #ee6983;
       }
     
       .card:nth-child(4) {
-        background: #f75cd0;
+        background: #850e35;
       }
     
       /*Styling for the card content starts here...*/
