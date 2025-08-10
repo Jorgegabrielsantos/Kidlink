@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="login-signup.css">
+  <title>Login / Sign Up</title>
+</head>
+<body>
+  <div class="container" id="form-container">
+    <div id="login-form" class="fade active">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+      <div class="toggle-link" onclick="toggleForm('signup')">Don't have an account? Sign up</div>
+    </div>
+
+    <div id="signup-form" class="fade" style="display:none;">
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Full Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Sign Up</button>
+      <div class="toggle-link" onclick="toggleForm('login')">Already have an account? Login</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm(form) {
+      const loginForm = document.getElementById('login-form');
+      const signupForm = document.getElementById('signup-form');
+
+      if (form === 'signup') {
+        loginForm.classList.remove('active');
+        setTimeout(() => {
+          loginForm.style.display = 'none';
+          signupForm.style.display = 'block';
+          setTimeout(() => signupForm.classList.add('active'), 10);
+        }, 400);
+      } else {
+        signupForm.classList.remove('active');
+        setTimeout(() => {
+          signupForm.style.display = 'none';
+          loginForm.style.display = 'block';
+          setTimeout(() => loginForm.classList.add('active'), 10);
+        }, 400);
+      }
+    }
+  </script>
+</body>
+</html>
